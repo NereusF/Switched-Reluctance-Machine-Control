@@ -1,0 +1,41 @@
+'Flux Script
+for n=0,59,1 do
+for x=0.5,6,0.5 do
+mi_modifycircprop("CircuitA",1,x)
+mi_createmesh()
+mi_analyze()
+mi_loadsolution()
+mo_groupselectblock(1)
+print(n,mo_getcircuitproperties("CircuitA"))
+end
+mi_selectgroup(1)
+mi_moverotate(0,0,1)
+end 
+
+
+
+' Torque Script
+for n=0,59,1 do
+mi_createmesh()
+for x=0.5,6,0.5 do
+mi_modifycircprop("CircuitA",1,x)
+mi_analyze()
+mi_loadsolution()
+mo_groupselectblock(1)
+print(n,x, mo_blockintegral(22))
+mo_clearblock(1)
+end
+mi_selectgroup(1)
+mi_moverotate(0,0,1)
+end 
+
+
+
+for surface plot in Matlab
+>> load('WorkSpaceBackup1.mat')
+>>cftool
+X data : RotorAngles, Y data : StatorCurrents, Z data : FTBL
+X data : RotorAngles, Y data : StatorCurrents, Z data : TTBL
+
+
+

@@ -1,0 +1,26 @@
+%%inductance cal
+%%parameters
+
+V=240;
+Vd=0.7;
+R=0.03847;
+J=0.03;
+C=0.47;
+L=8.93636*10^-3;
+Bm=0.02;
+Iref=168;
+LMIN=0.22*10^-3;
+DELTAI=5;
+Ns=6;
+Nr=4;
+P=3;
+BETAS=30;
+BETAR=32;
+THETAS=(2*180)*((1/Nr)-(1/Ns));
+THETAX=(180/Nr)-((BETAR+BETAS)/2);
+THETAY=(180/Nr)-((BETAR-BETAS)/2);
+THETAZ=(BETAR-BETAS)/2;
+THETAXY=(THETAY+THETAZ+THETAS);
+THETAON=10;
+THETAOFF=40;
+Ts=1*10^-5;
